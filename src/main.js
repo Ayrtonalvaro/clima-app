@@ -16,7 +16,7 @@ async function loadWeatherFor(place) {
   renderHours(data.hourly, units, new Date());
 }
 
-// Eventos de búsqueda
+
 els.q.addEventListener("input", debounce(async (e) => {
   const text = e.target.value.trim();
   if (text.length < 2) { els.suggestions.innerHTML = ""; return; }
@@ -35,7 +35,7 @@ els.q.addEventListener("keydown", (e) => {
   if (e.key === "Enter") els.btn.click();
 });
 
-// Toggle de unidades
+
 els.unitsBar.addEventListener("click", async (e) => {
   const btn = e.target.closest("button[data-u]");
   if (!btn) return;
@@ -48,8 +48,12 @@ els.unitsBar.addEventListener("click", async (e) => {
   if (state.lastPlace) loadWeatherFor(state.lastPlace);
 });
 
-// Carga inicial con Berlín
+
 window.addEventListener("load", () => {
-  const berlin = { name: "Berlín, Alemania", lat: 52.52, lon: 13.405 };
-  loadWeatherFor(berlin);
+  const buenosAires = { 
+    name: "Buenos Aires, Argentina", 
+    lat: -34.61, 
+    lon: -58.38 
+  };
+  loadWeatherFor(buenosAires);
 });
