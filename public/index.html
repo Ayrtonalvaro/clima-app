@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Weather Now</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="../styles/styles.css" />
+</head>
+
+<body>
+  <header>
+    <div class="brand">☀️ Weather Now</div>
+    <div class="units" id="units">
+      <button data-u="metric" class="active" aria-pressed="true">Metric</button>
+      <button data-u="imperial" aria-pressed="false">Imperial</button>
+    </div>
+  </header>
+
+  <main>
+    <h1>¿Cómo está el cielo hoy?</h1>
+
+    <div class="searchbar">
+      <input id="q" placeholder="Buscar una ciudad..." autocomplete="off" />
+      <button id="btnSearch">Buscar</button>
+    </div>
+    <div class="suggestions" id="suggestions"></div>
+
+    <section class="grid" id="panels" hidden>
+      <article class="card">
+        <div class="loc" id="loc">Ciudad</div>
+        <div class="date" id="date">Fecha</div>
+        <div class="hero">
+          <div class="wicon" id="bigicon">☁️</div>
+          <div class="bigtemp" id="bigtemp">0°</div>
+          <div id="desc" class="pill">—</div>
+        </div>
+        <div class="tagrow">
+          <div class="tag">
+            <div class="label">Sensación</div>
+            <div class="val" id="feels">—</div>
+          </div>
+          <div class="tag">
+            <div class="label">Humedad</div>
+            <div class="val" id="hum">—</div>
+          </div>
+          <div class="tag">
+            <div class="label">Viento</div>
+            <div class="val" id="wind">—</div>
+          </div>
+          <div class="tag">
+            <div class="label">Precipitación</div>
+            <div class="val" id="pp">—</div>
+          </div>
+        </div>
+      </article>
+
+      <aside class="side">
+        <h3>Pronóstico horario</h3>
+        <div class="hourlist" id="hours"></div>
+        <div class="hint">Fuente: Open-Meteo</div>
+      </aside>
+    </section>
+
+    <p class="foot">Usa el buscador para elegir una ciudad. La zona horaria se detecta automáticamente.</p>
+  </main>
+
+  <script type="module" src="../src/main.js"></script>
+</body>
+
+</html>

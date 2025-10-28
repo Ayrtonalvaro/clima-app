@@ -1,0 +1,14 @@
+{
+  "name": "clima-app",
+  "version": "1.0.0",
+  "description": "App del tiempo con Open-Meteo (HTML/CSS/ESM) servida con Node.js + Docker",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.21.1"
+  },
+  "license": "MIT"
+}
