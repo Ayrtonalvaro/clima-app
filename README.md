@@ -42,26 +42,8 @@ CLIMA-APP/
 ├─ Dockerfile
 └─ README.md
 
-## ▶️ Ejecución local (modo desarrollo)
+## Imagenes del proyecto
 
-Requisitos: Node.js 18+
-
-```bash
-npm install
-npm start
-
-
-## 🐳 Construcción y ejecución con Docker
-
-docker build -t clima-app:local .
-
-docker run --name clima-app -p 3000:3000 clima-app:local
-
-🔗 APIs utilizadas
-
-Geocoding Open-Meteo
-https://geocoding-api.open-meteo.com/v1/search?...
-
-Weather Forecast Open-Meteo
-https://api.open-meteo.com/v1/forecast?
-
+### Aplicación ejecutándose dentro del contenedor
+![App funcionando](imagenes/aplicacion.png)
+![App funcionando](imagenes/docker.png)
